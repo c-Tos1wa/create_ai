@@ -35,3 +35,62 @@ class Neuron {
     }
 }
 
+class RNA{
+    constructor(inputCount = 1, levelList= []) {
+        this.score =0;
+
+        this.levelList = levelList.map((l, i) => {
+            const inputSize = i === 0 ? inputCount : levelList[i - 1]
+
+            return new Array(l)
+            .fill()
+            .map(() => new Neuron(inputSize))
+        })
+    }
+
+    compute(list = []){
+        for (let i = 0; i < this.levelList.length; i++){
+            const tempList = []
+
+            for (const neuron of this.levelList[i]) {
+                if (list.length !== neuron.weightList.length) throw new Error("Entrada inválida")
+                tempList.push(neuron.g(list))
+            }
+
+            list = tempList
+        }
+
+        return list
+    }
+
+}
+
+mutate(rate = 1); {
+    for (const level of this.levelList) {
+        for (const neuron of level) neuron.mutate(rate)
+    }
+}
+
+load(na); {
+    if (!na) return;
+    try {
+        this.levelList = rna.map((neuronList) => {
+            return neuronList.map((neuron) => {
+                const n = new Neuron()
+                n.bias = neuron.bias
+                n.weightList = neuron.weightList;
+
+                return n
+            })
+        })
+    } catch (e) {
+        return
+    }
+    
+    save();{
+        return this.levelList
+    }
+}
+
+export default RNA
+
