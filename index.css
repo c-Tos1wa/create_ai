@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+h2{
+    font-weight: 900;
+    color: #320d6d;
+    text-align: center;
+    padding: 15px;
+}
+
+p{
+    font-weight: 300;
+    //margin: 20px;
+}
