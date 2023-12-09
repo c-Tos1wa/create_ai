@@ -1,1 +1,1 @@
-# create_ai
+# Criando uma Rede Neural Aritficial (RNA)
