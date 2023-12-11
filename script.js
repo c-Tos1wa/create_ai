@@ -2,7 +2,7 @@ import utils from './utils.js'
 import RNA from './RNA.js'
 import controls from './controls.js'
 
-const SAMPLES = 20 // número de amostras no Algoritmo Genético
+const SAMPLES = 5 // número de amostras no Algoritmo Genético
 
 const game = Runner.instance_; // instância do jogo
 
